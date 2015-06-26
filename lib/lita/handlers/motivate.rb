@@ -3,7 +3,7 @@ module Lita
     class Motivate < Handler
 
 
-      route(/^!(m|than(k|ks)) (.+)$/, :motivate, help: {
+      route(/^!*(m|than(k|ks)) (.+)$/, :motivate, help: {
               "!m USER" => "motivates the user.",
               "!m thank(s) USER" => "motivates the user."
             })
