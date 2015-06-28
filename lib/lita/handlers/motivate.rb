@@ -3,7 +3,7 @@ module Lita
     class Motivate < Handler
 
 
-      route(/^!*(m|than(k|ks)) (.+)$/, :motivate, help: {
+      route(/^(m|than(k|ks)) (.+)$/, :motivate, help: {
               "!m USER" => "motivates the user.",
               "!m thank(s) USER" => "motivates the user."
             })
@@ -16,7 +16,7 @@ module Lita
     end
 
     class MotivateWithTemplates < Handler
-      route(/^(\^5|!h5) (.+)$/, :high_five, help: {
+      route(/^(\^5|h5) (.+)$/, :high_five, help: {
               "!h5 USER" => "high fives the user.",
               "^5 USER" => "high fives the user."
             })
